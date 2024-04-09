@@ -19,7 +19,7 @@ namespace QuanLyBanHangNhom1
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            //THAY DOI NHO
         }
 
         private void label2_Click(object sender, EventArgs e)
