@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanHangNhom1
 {
-    partial class FromMain
+    partial class FormNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FromMain
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FromMain";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FromMain_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "FormNhanVien";
         }
 
         #endregion
     }
 }
-

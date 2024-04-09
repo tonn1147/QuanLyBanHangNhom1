@@ -63,14 +63,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfiguration.cs" />
+    <Compile Include="FormChatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChatLieu.Designer.cs">
+      <DependentUpon>FormChatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHangHoa.Designer.cs">
+      <DependentUpon>FormHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FromMain.Designer.cs">
       <DependentUpon>FromMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>
     </EmbeddedResource>

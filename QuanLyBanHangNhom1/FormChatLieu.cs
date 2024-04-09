@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyBanHangNhom1
 {
-    public partial class FromMain : Form
+    public partial class FormChatLieu : Form
     {
-        public FromMain()
+        public FormChatLieu()
         {
             InitializeComponent();
-        }
-
-        private void FromMain_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
