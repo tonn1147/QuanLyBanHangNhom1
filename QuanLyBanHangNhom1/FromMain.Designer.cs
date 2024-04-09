@@ -40,14 +40,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // Form1
+            // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FromMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FromMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

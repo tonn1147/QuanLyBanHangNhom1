@@ -16,5 +16,10 @@ namespace QuanLyBanHangNhom1
         {
             InitializeComponent();
         }
+
+        private void FromMain_Load(object sender, EventArgs e)
+        {
+            label1.Text = AppConfiguration.ConnectionString;
+        }
     }
 }
