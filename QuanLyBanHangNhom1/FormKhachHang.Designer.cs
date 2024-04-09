@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormKhachHang
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormKhachHang";
+            this.Name = "FormKhachHang";
+            this.Text = "Khách Hàng";
+            this.Load += new System.EventHandler(this.FormKhachHang_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
