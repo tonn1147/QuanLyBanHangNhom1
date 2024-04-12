@@ -16,5 +16,10 @@ namespace QuanLyBanHangNhom1
         {
             InitializeComponent();
         }
+
+        private void FormHangHoa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

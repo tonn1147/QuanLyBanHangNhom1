@@ -21,5 +21,11 @@ namespace QuanLyBanHangNhom1
         {
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormHoaDon formHoaDon = new FormHoaDon();
+            formHoaDon.ShowDialog();
+        }
     }
 }
