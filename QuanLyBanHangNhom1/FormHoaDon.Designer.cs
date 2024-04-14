@@ -58,9 +58,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.HuyHoaDon = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ThemHoaDon = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -172,6 +172,7 @@
             this.MaKhachHang.Name = "MaKhachHang";
             this.MaKhachHang.Size = new System.Drawing.Size(199, 24);
             this.MaKhachHang.TabIndex = 14;
+            this.MaKhachHang.SelectedIndexChanged += new System.EventHandler(this.MaKhachHang_SelectedIndexChanged);
             // 
             // MaNhanVien
             // 
@@ -180,6 +181,7 @@
             this.MaNhanVien.Name = "MaNhanVien";
             this.MaNhanVien.Size = new System.Drawing.Size(202, 24);
             this.MaNhanVien.TabIndex = 13;
+            this.MaNhanVien.SelectedIndexChanged += new System.EventHandler(this.MaNhanVien_SelectedIndexChanged);
             // 
             // NgayBan
             // 
@@ -321,9 +323,9 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.HuyHoaDon);
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.ThemHoaDon);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.comboBox3);
             this.groupBox2.Controls.Add(this.textBox8);
@@ -380,14 +382,15 @@
             this.button4.Text = "In Hóa Đơn";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // HuyHoaDon
             // 
-            this.button3.Location = new System.Drawing.Point(296, 235);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Hủy Hóa Đơn";
-            this.button3.UseVisualStyleBackColor = true;
+            this.HuyHoaDon.Location = new System.Drawing.Point(296, 235);
+            this.HuyHoaDon.Name = "HuyHoaDon";
+            this.HuyHoaDon.Size = new System.Drawing.Size(133, 23);
+            this.HuyHoaDon.TabIndex = 32;
+            this.HuyHoaDon.Text = "Hủy Hóa Đơn";
+            this.HuyHoaDon.UseVisualStyleBackColor = true;
+            this.HuyHoaDon.Click += new System.EventHandler(this.HuyHoaDon_Click);
             // 
             // button2
             // 
@@ -398,14 +401,15 @@
             this.button2.Text = "Lưu Hóa Đơn";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ThemHoaDon
             // 
-            this.button1.Location = new System.Drawing.Point(24, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Thêm Hóa Đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ThemHoaDon.Location = new System.Drawing.Point(24, 235);
+            this.ThemHoaDon.Name = "ThemHoaDon";
+            this.ThemHoaDon.Size = new System.Drawing.Size(139, 23);
+            this.ThemHoaDon.TabIndex = 30;
+            this.ThemHoaDon.Text = "Thêm Hóa Đơn";
+            this.ThemHoaDon.UseVisualStyleBackColor = true;
+            this.ThemHoaDon.Click += new System.EventHandler(this.ThemHoaDon_Click);
             // 
             // dataGridView1
             // 
@@ -586,9 +590,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button HuyHoaDon;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ThemHoaDon;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label18;
     }

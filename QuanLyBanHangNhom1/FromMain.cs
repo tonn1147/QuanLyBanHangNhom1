@@ -27,5 +27,17 @@ namespace QuanLyBanHangNhom1
             FormHoaDon formHoaDon = new FormHoaDon();
             formHoaDon.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormKhachHang formKhachHang = new FormKhachHang();
+            formKhachHang.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormNhanVien formNhanVien = new FormNhanVien();
+            formNhanVien.ShowDialog();
+        }
     }
 }

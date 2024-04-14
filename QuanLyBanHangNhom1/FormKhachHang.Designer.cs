@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.MaKhachHang = new System.Windows.Forms.TextBox();
+            this.TenKhachHang = new System.Windows.Forms.TextBox();
+            this.DiaChi = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.DienThoai = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.MaKhachHang);
+            this.panel2.Controls.Add(this.TenKhachHang);
+            this.panel2.Controls.Add(this.DiaChi);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.DienThoai);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -67,28 +67,28 @@
             this.panel2.Size = new System.Drawing.Size(862, 170);
             this.panel2.TabIndex = 3;
             // 
-            // textBox5
+            // MaKhachHang
             // 
-            this.textBox5.HideSelection = false;
-            this.textBox5.Location = new System.Drawing.Point(153, 54);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(239, 22);
-            this.textBox5.TabIndex = 11;
+            this.MaKhachHang.HideSelection = false;
+            this.MaKhachHang.Location = new System.Drawing.Point(153, 54);
+            this.MaKhachHang.Name = "MaKhachHang";
+            this.MaKhachHang.ReadOnly = true;
+            this.MaKhachHang.Size = new System.Drawing.Size(239, 22);
+            this.MaKhachHang.TabIndex = 11;
             // 
-            // textBox4
+            // TenKhachHang
             // 
-            this.textBox4.Location = new System.Drawing.Point(153, 110);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 22);
-            this.textBox4.TabIndex = 10;
+            this.TenKhachHang.Location = new System.Drawing.Point(153, 110);
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.Size = new System.Drawing.Size(239, 22);
+            this.TenKhachHang.TabIndex = 10;
             // 
-            // textBox3
+            // DiaChi
             // 
-            this.textBox3.Location = new System.Drawing.Point(515, 54);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(284, 22);
-            this.textBox3.TabIndex = 9;
+            this.DiaChi.Location = new System.Drawing.Point(515, 54);
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Size = new System.Drawing.Size(284, 22);
+            this.DiaChi.TabIndex = 9;
             // 
             // textBox2
             // 
@@ -97,14 +97,14 @@
             this.textBox2.Size = new System.Drawing.Size(264, 22);
             this.textBox2.TabIndex = 8;
             // 
-            // label6
+            // DienThoai
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(460, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Điện Thoại";
+            this.DienThoai.AutoSize = true;
+            this.DienThoai.Location = new System.Drawing.Point(460, 113);
+            this.DienThoai.Name = "DienThoai";
+            this.DienThoai.Size = new System.Drawing.Size(72, 16);
+            this.DienThoai.TabIndex = 5;
+            this.DienThoai.Text = "Điện Thoại";
             // 
             // label5
             // 
@@ -173,6 +173,7 @@
             this.BoQua.TabIndex = 3;
             this.BoQua.Text = "Bỏ Qua";
             this.BoQua.UseVisualStyleBackColor = true;
+            this.BoQua.Click += new System.EventHandler(this.BoQua_Click);
             // 
             // Luu
             // 
@@ -182,6 +183,7 @@
             this.Luu.TabIndex = 4;
             this.Luu.Text = "Lưu";
             this.Luu.UseVisualStyleBackColor = true;
+            this.Luu.Click += new System.EventHandler(this.Luu_Click);
             // 
             // Xoa
             // 
@@ -191,6 +193,7 @@
             this.Xoa.TabIndex = 5;
             this.Xoa.Text = "Xóa";
             this.Xoa.UseVisualStyleBackColor = true;
+            this.Xoa.Click += new System.EventHandler(this.Xoa_Click);
             // 
             // Sua
             // 
@@ -200,6 +203,7 @@
             this.Sua.TabIndex = 6;
             this.Sua.Text = "Sửa";
             this.Sua.UseVisualStyleBackColor = true;
+            this.Sua.Click += new System.EventHandler(this.Sua_Click);
             // 
             // Them
             // 
@@ -209,6 +213,7 @@
             this.Them.TabIndex = 1;
             this.Them.Text = "Thêm";
             this.Them.UseVisualStyleBackColor = true;
+            this.Them.Click += new System.EventHandler(this.Them_Click);
             // 
             // dataGridView1
             // 
@@ -242,11 +247,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox MaKhachHang;
+        private System.Windows.Forms.TextBox TenKhachHang;
+        private System.Windows.Forms.TextBox DiaChi;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label DienThoai;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
