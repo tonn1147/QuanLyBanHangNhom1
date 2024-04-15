@@ -32,8 +32,8 @@
             this.MaKhachHang = new System.Windows.Forms.TextBox();
             this.TenKhachHang = new System.Windows.Forms.TextBox();
             this.DiaChi = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.DienThoai = new System.Windows.Forms.Label();
+            this.DienThoai = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,8 +56,8 @@
             this.panel2.Controls.Add(this.MaKhachHang);
             this.panel2.Controls.Add(this.TenKhachHang);
             this.panel2.Controls.Add(this.DiaChi);
-            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.DienThoai);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -90,21 +90,21 @@
             this.DiaChi.Size = new System.Drawing.Size(284, 22);
             this.DiaChi.TabIndex = 9;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(535, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 22);
-            this.textBox2.TabIndex = 8;
-            // 
             // DienThoai
             // 
-            this.DienThoai.AutoSize = true;
-            this.DienThoai.Location = new System.Drawing.Point(460, 113);
+            this.DienThoai.Location = new System.Drawing.Point(535, 110);
             this.DienThoai.Name = "DienThoai";
-            this.DienThoai.Size = new System.Drawing.Size(72, 16);
-            this.DienThoai.TabIndex = 5;
-            this.DienThoai.Text = "Điện Thoại";
+            this.DienThoai.Size = new System.Drawing.Size(264, 22);
+            this.DienThoai.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(460, 113);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 16);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Điện Thoại";
             // 
             // label5
             // 
@@ -164,6 +164,7 @@
             this.Dong.TabIndex = 2;
             this.Dong.Text = "Đóng";
             this.Dong.UseVisualStyleBackColor = true;
+            this.Dong.Click += new System.EventHandler(this.Dong_Click);
             // 
             // BoQua
             // 
@@ -224,6 +225,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(862, 256);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FormKhachHang
             // 
@@ -250,8 +252,8 @@
         private System.Windows.Forms.TextBox MaKhachHang;
         private System.Windows.Forms.TextBox TenKhachHang;
         private System.Windows.Forms.TextBox DiaChi;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label DienThoai;
+        private System.Windows.Forms.TextBox DienThoai;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -62,7 +62,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ThemHoaDon = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.MaHang = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -192,6 +192,7 @@
             // 
             // DienThoai
             // 
+            this.DienThoai.Enabled = false;
             this.DienThoai.Location = new System.Drawing.Point(461, 125);
             this.DienThoai.Name = "DienThoai";
             this.DienThoai.ReadOnly = true;
@@ -200,6 +201,7 @@
             // 
             // DiaChi
             // 
+            this.DiaChi.Enabled = false;
             this.DiaChi.Location = new System.Drawing.Point(438, 88);
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
@@ -208,6 +210,7 @@
             // 
             // TenKhachHang
             // 
+            this.TenKhachHang.Enabled = false;
             this.TenKhachHang.Location = new System.Drawing.Point(491, 54);
             this.TenKhachHang.Name = "TenKhachHang";
             this.TenKhachHang.ReadOnly = true;
@@ -216,8 +219,10 @@
             // 
             // MaHoaDon
             // 
+            this.MaHoaDon.Enabled = false;
             this.MaHoaDon.Location = new System.Drawing.Point(112, 24);
             this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
             this.MaHoaDon.Size = new System.Drawing.Size(211, 22);
             this.MaHoaDon.TabIndex = 9;
             // 
@@ -228,6 +233,7 @@
             this.TenNhanVien.ReadOnly = true;
             this.TenNhanVien.Size = new System.Drawing.Size(197, 22);
             this.TenNhanVien.TabIndex = 5;
+            this.TenNhanVien.Visible = false;
             // 
             // label11
             // 
@@ -327,7 +333,7 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.ThemHoaDon);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.MaHang);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.textBox10);
@@ -422,16 +428,18 @@
             this.dataGridView1.TabIndex = 29;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // comboBox3
+            // MaHang
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(89, 27);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 24);
-            this.comboBox3.TabIndex = 28;
+            this.MaHang.FormattingEnabled = true;
+            this.MaHang.Location = new System.Drawing.Point(89, 27);
+            this.MaHang.Name = "MaHang";
+            this.MaHang.Size = new System.Drawing.Size(159, 24);
+            this.MaHang.TabIndex = 28;
+            this.MaHang.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(586, 56);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -440,6 +448,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(566, 27);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -455,6 +464,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(327, 27);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -584,7 +594,7 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox MaHang;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DataGridView dataGridView1;

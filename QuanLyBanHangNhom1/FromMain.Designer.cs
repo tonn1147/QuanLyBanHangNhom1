@@ -31,6 +31,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuChatLieu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuKhachHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuHangHoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuHoaDon = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -63,6 +74,83 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuFile,
+            this.menuDanhMuc,
+            this.menuTimKiem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuFile
+            // 
+            this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuThoat});
+            this.menuFile.Name = "menuFile";
+            this.menuFile.Size = new System.Drawing.Size(72, 24);
+            this.menuFile.Text = "Tệp Tin";
+            // 
+            // menuThoat
+            // 
+            this.menuThoat.Name = "menuThoat";
+            this.menuThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.menuThoat.Size = new System.Drawing.Size(224, 26);
+            this.menuThoat.Text = "Thoát";
+            // 
+            // menuDanhMuc
+            // 
+            this.menuDanhMuc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuChatLieu,
+            this.menuNhanVien,
+            this.menuKhachHang,
+            this.menuHangHoa});
+            this.menuDanhMuc.Name = "menuDanhMuc";
+            this.menuDanhMuc.Size = new System.Drawing.Size(90, 24);
+            this.menuDanhMuc.Text = "Danh Mục";
+            // 
+            // menuChatLieu
+            // 
+            this.menuChatLieu.Name = "menuChatLieu";
+            this.menuChatLieu.Size = new System.Drawing.Size(224, 26);
+            this.menuChatLieu.Text = "Chất Liệu";
+            // 
+            // menuNhanVien
+            // 
+            this.menuNhanVien.Name = "menuNhanVien";
+            this.menuNhanVien.Size = new System.Drawing.Size(224, 26);
+            this.menuNhanVien.Text = "Nhân Viên";
+            // 
+            // menuKhachHang
+            // 
+            this.menuKhachHang.Name = "menuKhachHang";
+            this.menuKhachHang.Size = new System.Drawing.Size(224, 26);
+            this.menuKhachHang.Text = "Khách Hàng";
+            // 
+            // menuHangHoa
+            // 
+            this.menuHangHoa.Name = "menuHangHoa";
+            this.menuHangHoa.Size = new System.Drawing.Size(224, 26);
+            this.menuHangHoa.Text = "Hàng Hóa";
+            // 
+            // menuTimKiem
+            // 
+            this.menuTimKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuHoaDon});
+            this.menuTimKiem.Name = "menuTimKiem";
+            this.menuTimKiem.Size = new System.Drawing.Size(86, 24);
+            this.menuTimKiem.Text = "Tìm Kiếm";
+            // 
+            // menuHoaDon
+            // 
+            this.menuHoaDon.Name = "menuHoaDon";
+            this.menuHoaDon.Size = new System.Drawing.Size(224, 26);
+            this.menuHoaDon.Text = "Hóa Đơn";
+            // 
             // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -71,10 +159,15 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FromMain";
-            this.Text = "Form1";
+            this.Text = "Chương Trình Quản Lý Bán Hàng Lưu Niệm";
             this.Load += new System.EventHandler(this.FromMain_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,6 +176,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuFile;
+        private System.Windows.Forms.ToolStripMenuItem menuThoat;
+        private System.Windows.Forms.ToolStripMenuItem menuDanhMuc;
+        private System.Windows.Forms.ToolStripMenuItem menuChatLieu;
+        private System.Windows.Forms.ToolStripMenuItem menuNhanVien;
+        private System.Windows.Forms.ToolStripMenuItem menuKhachHang;
+        private System.Windows.Forms.ToolStripMenuItem menuHangHoa;
+        private System.Windows.Forms.ToolStripMenuItem menuTimKiem;
+        private System.Windows.Forms.ToolStripMenuItem menuHoaDon;
     }
 }
 

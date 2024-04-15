@@ -25,6 +25,7 @@ namespace QuanLyBanHangNhom1
 
         private List<string> _listMaNhanVien;
         private List<string> _listMaKhachHang;
+        private List<string> _listMaHang;
         private string MaHoaDonPrefix = "HD";
 
         private void FormHoaDon_Load(object sender, EventArgs e)
@@ -35,8 +36,10 @@ namespace QuanLyBanHangNhom1
 
                 _listMaNhanVien = GetListMaNhanVien();
                 _listMaKhachHang = GetListMaKhachHang();
+                _listMaHang = GetListMaHang();
                 MaKhachHang.DataSource = _listMaKhachHang;
                 MaNhanVien.DataSource = _listMaNhanVien;
+                MaHang.DataSource = _listMaHang;
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -239,6 +242,35 @@ namespace QuanLyBanHangNhom1
                 DisconnectDb();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private List<string> GetListMaHang()
+        {
+            try
+            {
+                ConnectDb();
+                string sql = $"SELECT MaHang FROM dbo.tblHang";
+                SqlCommand command = new SqlCommand(sql, _conn);
+                SqlDataReader dataReader = command.ExecuteReader();
+                List<string> ListMaHang = new List<string>();
+                while (dataReader.Read())
+                {
+                    ListMaHang.Add(dataReader.GetValue(0).ToString());
+                }
+                DisconnectDb();
+                return ListMaHang;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace, ex.Message);
+
+            }
+            return null;
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

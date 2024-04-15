@@ -181,5 +181,20 @@ namespace QuanLyBanHangNhom1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dataGridView1.CurrentRow.Index;
+            MaKhachHang.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            TenKhachHang.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            DiaChi.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            DienThoai.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void Dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
