@@ -97,7 +97,7 @@ namespace QuanLyBanHangNhom1
                 command.Parameters.AddWithValue("gioiTinh",GioiTinh.Text);
                 command.Parameters.AddWithValue("DiaChi", DiaChi.Text);
                 command.Parameters.AddWithValue("dienThoai", DienThoai.Text);
-                command.Parameters.AddWithValue("ngaySinh",NgaySinh.Value.ToString("dd/MM/yyyy"));
+                command.Parameters.AddWithValue("ngaySinh", NgaySinh.Value);
                 command.ExecuteNonQuery();
                 LoadData("SELECT * from dbo.tblNhanVien;");
                 MessageBox.Show("updated successfully!");

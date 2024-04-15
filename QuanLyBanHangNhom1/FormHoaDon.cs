@@ -27,12 +27,13 @@ namespace QuanLyBanHangNhom1
         private List<string> _listMaKhachHang;
         private List<string> _listMaHang;
         private string MaHoaDonPrefix = "HD";
+        private int TongTien = 0;
 
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
             try
             {
-                LoadData("select * from tblHDBan");
+                LoadData("select * from tblHang");
 
                 _listMaNhanVien = GetListMaNhanVien();
                 _listMaKhachHang = GetListMaKhachHang();
@@ -87,10 +88,12 @@ namespace QuanLyBanHangNhom1
         {
             int i;
             i = dataGridView1.CurrentRow.Index;
-            MaHoaDon.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            MaNhanVien.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            NgayBan.Value = (DateTime)dataGridView1.Rows[i].Cells[2].Value;
-            MaKhachHang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            MaHang.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            TenHang.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            SoLuong.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            DonGia.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            ThanhTien.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+            GiamGia.Text = (int.Parse(ThanhTien.Text) - int.Parse(DonGia.Text)).ToString();
         }
 
         private void ConnectDb()
@@ -269,6 +272,11 @@ namespace QuanLyBanHangNhom1
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThemVaoHoaDon_Click(object sender, EventArgs e)
         {
 
         }

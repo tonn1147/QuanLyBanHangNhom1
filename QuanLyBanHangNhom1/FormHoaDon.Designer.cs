@@ -63,17 +63,18 @@
             this.ThemHoaDon = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaHang = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ThanhTien = new System.Windows.Forms.TextBox();
+            this.DonGia = new System.Windows.Forms.TextBox();
+            this.SoLuong = new System.Windows.Forms.TextBox();
+            this.TenHang = new System.Windows.Forms.TextBox();
+            this.GiamGia = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.ThemVaoHoaDon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -325,6 +326,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.ThemVaoHoaDon);
             this.groupBox2.Controls.Add(this.textBox11);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.button5);
@@ -334,11 +336,11 @@
             this.groupBox2.Controls.Add(this.ThemHoaDon);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.MaHang);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.ThanhTien);
+            this.groupBox2.Controls.Add(this.DonGia);
+            this.groupBox2.Controls.Add(this.SoLuong);
+            this.groupBox2.Controls.Add(this.TenHang);
+            this.groupBox2.Controls.Add(this.GiamGia);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
@@ -354,7 +356,8 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(584, 200);
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(584, 206);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(157, 22);
@@ -363,7 +366,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(509, 203);
+            this.label18.Location = new System.Drawing.Point(509, 206);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 16);
             this.label18.TabIndex = 35;
@@ -371,7 +374,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(566, 235);
+            this.button5.Location = new System.Drawing.Point(634, 235);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 23);
             this.button5.TabIndex = 34;
@@ -381,18 +384,18 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(435, 235);
+            this.button4.Location = new System.Drawing.Point(541, 235);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 23);
+            this.button4.Size = new System.Drawing.Size(87, 23);
             this.button4.TabIndex = 33;
             this.button4.Text = "In Hóa Đơn";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // HuyHoaDon
             // 
-            this.HuyHoaDon.Location = new System.Drawing.Point(296, 235);
+            this.HuyHoaDon.Location = new System.Drawing.Point(435, 235);
             this.HuyHoaDon.Name = "HuyHoaDon";
-            this.HuyHoaDon.Size = new System.Drawing.Size(133, 23);
+            this.HuyHoaDon.Size = new System.Drawing.Size(100, 23);
             this.HuyHoaDon.TabIndex = 32;
             this.HuyHoaDon.Text = "Hủy Hóa Đơn";
             this.HuyHoaDon.UseVisualStyleBackColor = true;
@@ -400,7 +403,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(169, 235);
+            this.button2.Location = new System.Drawing.Point(308, 235);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 23);
             this.button2.TabIndex = 31;
@@ -409,7 +412,7 @@
             // 
             // ThemHoaDon
             // 
-            this.ThemHoaDon.Location = new System.Drawing.Point(24, 235);
+            this.ThemHoaDon.Location = new System.Drawing.Point(0, 235);
             this.ThemHoaDon.Name = "ThemHoaDon";
             this.ThemHoaDon.Size = new System.Drawing.Size(139, 23);
             this.ThemHoaDon.TabIndex = 30;
@@ -437,46 +440,46 @@
             this.MaHang.TabIndex = 28;
             this.MaHang.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // textBox8
+            // ThanhTien
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(586, 56);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(155, 22);
-            this.textBox8.TabIndex = 27;
+            this.ThanhTien.Enabled = false;
+            this.ThanhTien.Location = new System.Drawing.Point(586, 56);
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            this.ThanhTien.Size = new System.Drawing.Size(155, 22);
+            this.ThanhTien.TabIndex = 27;
             // 
-            // textBox6
+            // DonGia
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(566, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(175, 22);
-            this.textBox6.TabIndex = 26;
+            this.DonGia.Enabled = false;
+            this.DonGia.Location = new System.Drawing.Point(566, 27);
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            this.DonGia.Size = new System.Drawing.Size(175, 22);
+            this.DonGia.TabIndex = 26;
             // 
-            // textBox10
+            // SoLuong
             // 
-            this.textBox10.Location = new System.Drawing.Point(89, 56);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(159, 22);
-            this.textBox10.TabIndex = 25;
+            this.SoLuong.Location = new System.Drawing.Point(89, 56);
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Size = new System.Drawing.Size(159, 22);
+            this.SoLuong.TabIndex = 25;
             // 
-            // textBox9
+            // TenHang
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(327, 27);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(172, 22);
-            this.textBox9.TabIndex = 24;
+            this.TenHang.Enabled = false;
+            this.TenHang.Location = new System.Drawing.Point(327, 27);
+            this.TenHang.Name = "TenHang";
+            this.TenHang.ReadOnly = true;
+            this.TenHang.Size = new System.Drawing.Size(172, 22);
+            this.TenHang.TabIndex = 24;
             // 
-            // textBox4
+            // GiamGia
             // 
-            this.textBox4.Location = new System.Drawing.Point(323, 56);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 22);
-            this.textBox4.TabIndex = 21;
+            this.GiamGia.Location = new System.Drawing.Point(323, 56);
+            this.GiamGia.Name = "GiamGia";
+            this.GiamGia.Size = new System.Drawing.Size(176, 22);
+            this.GiamGia.TabIndex = 21;
             // 
             // label12
             // 
@@ -531,6 +534,16 @@
             this.label17.Size = new System.Drawing.Size(75, 16);
             this.label17.TabIndex = 20;
             this.label17.Text = "Thành Tiền";
+            // 
+            // ThemVaoHoaDon
+            // 
+            this.ThemVaoHoaDon.Location = new System.Drawing.Point(145, 235);
+            this.ThemVaoHoaDon.Name = "ThemVaoHoaDon";
+            this.ThemVaoHoaDon.Size = new System.Drawing.Size(157, 23);
+            this.ThemVaoHoaDon.TabIndex = 37;
+            this.ThemVaoHoaDon.Text = "Thêm vào hóa đơn";
+            this.ThemVaoHoaDon.UseVisualStyleBackColor = true;
+            this.ThemVaoHoaDon.Click += new System.EventHandler(this.ThemVaoHoaDon_Click);
             // 
             // FormHoaDon
             // 
@@ -591,12 +604,12 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox SoLuong;
+        private System.Windows.Forms.TextBox TenHang;
+        private System.Windows.Forms.TextBox GiamGia;
         private System.Windows.Forms.ComboBox MaHang;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox ThanhTien;
+        private System.Windows.Forms.TextBox DonGia;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -605,5 +618,6 @@
         private System.Windows.Forms.Button ThemHoaDon;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button ThemVaoHoaDon;
     }
 }
