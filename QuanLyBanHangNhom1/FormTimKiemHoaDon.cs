@@ -41,5 +41,10 @@ namespace QuanLyBanHangNhom1
         {
 
         }
+
+        private void Sua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

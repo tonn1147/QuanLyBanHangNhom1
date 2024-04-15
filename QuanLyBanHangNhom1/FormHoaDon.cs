@@ -27,7 +27,7 @@ namespace QuanLyBanHangNhom1
         private List<string> _listMaKhachHang;
         private List<string> _listMaHang;
         private string MaHoaDonPrefix = "HD";
-        private int TongTien = 0;
+        private int tong = 0;
 
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
@@ -90,7 +90,7 @@ namespace QuanLyBanHangNhom1
             i = dataGridView1.CurrentRow.Index;
             MaHang.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             TenHang.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            SoLuong.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            SoLuong.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
             DonGia.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
             ThanhTien.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
             GiamGia.Text = (int.Parse(ThanhTien.Text) - int.Parse(DonGia.Text)).ToString();
@@ -278,7 +278,62 @@ namespace QuanLyBanHangNhom1
 
         private void ThemVaoHoaDon_Click(object sender, EventArgs e)
         {
+            int soTien = int.Parse(ThanhTien.Text) * int.Parse(SoLuong.Text);
+            tong += soTien;
+            TongTien.Text = tong.ToString();
+            try
+            {
+                ConnectDb();
+                SqlCommand command1 = _conn.CreateCommand();
+                command1.CommandText = $"SELECT SoLuong FROM dbo.tblHang Where MaHang = @maHang";
+                if (string.IsNullOrEmpty(MaHang.Text)) throw new ArgumentException();
+                command1.Parameters.AddWithValue("maHang", MaHang.Text);
+                SqlDataReader reader = command1.ExecuteReader();
+                if (!reader.Read()) throw new ArgumentException();
+                int soluong = int.Parse(reader.GetValue(0).ToString());
+                DisconnectDb();
 
+                ConnectDb();
+                SqlCommand command2 = _conn.CreateCommand();
+                command2.CommandText = $"UPDATE dbo.tblHang SET SoLuong = @soLuong Where MaHang = @maHang";
+                command2.Parameters.AddWithValue("soLuong", soluong - int.Parse(SoLuong.Text));
+                command2.Parameters.AddWithValue("maHang", MaHang.Text);
+                command2.ExecuteNonQuery();
+                LoadData("select * from tblHang");
+                DisconnectDb();
+                MessageBox.Show("updated successfully!");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Luu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ConnectDb();
+                SqlCommand command = _conn.CreateCommand();
+                command.CommandText = $"INSERT INTO dbo.tblHDBan VALUES (@maHD, @maNhanVien,@ngayBan,@MaKhach,@tongTien);";
+
+                if (string.IsNullOrEmpty(MaHoaDon.Text) || string.IsNullOrEmpty(MaNhanVien.Text) || string.IsNullOrEmpty(MaKhachHang.Text) || string.IsNullOrEmpty(TongTien.Text)) throw new Exception("khong duoc de trong");
+
+                command.Parameters.AddWithValue("maHD", MaHoaDon.Text);
+                command.Parameters.AddWithValue("maNhanVien", MaNhanVien.Text);
+                command.Parameters.AddWithValue("MaKhach", MaKhachHang.Text);
+                command.Parameters.AddWithValue("tongTien", TongTien.Text);
+                command.Parameters.AddWithValue("NgayBan", NgayBan.Value);
+                command.ExecuteNonQuery();
+                LoadData("SELECT * from dbo.tblHang;");
+                MessageBox.Show("created successfully!");
+                DisconnectDb();
+            }
+            catch (Exception ex)
+            {
+                DisconnectDb();
+                MessageBox.Show(ex.Message);
+            }
+            ClearData();
         }
     }
 }

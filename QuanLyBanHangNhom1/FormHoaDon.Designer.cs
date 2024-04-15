@@ -54,12 +54,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.ThemVaoHoaDon = new System.Windows.Forms.Button();
+            this.TongTien = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.HuyHoaDon = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Luu = new System.Windows.Forms.Button();
             this.ThemHoaDon = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MaHang = new System.Windows.Forms.ComboBox();
@@ -74,7 +75,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.ThemVaoHoaDon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -327,12 +327,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ThemVaoHoaDon);
-            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.TongTien);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.HuyHoaDon);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.Luu);
             this.groupBox2.Controls.Add(this.ThemHoaDon);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.MaHang);
@@ -354,14 +354,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin các mặt hàng";
             // 
-            // textBox11
+            // ThemVaoHoaDon
             // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(584, 206);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(157, 22);
-            this.textBox11.TabIndex = 36;
+            this.ThemVaoHoaDon.Location = new System.Drawing.Point(145, 235);
+            this.ThemVaoHoaDon.Name = "ThemVaoHoaDon";
+            this.ThemVaoHoaDon.Size = new System.Drawing.Size(157, 23);
+            this.ThemVaoHoaDon.TabIndex = 37;
+            this.ThemVaoHoaDon.Text = "Thêm vào hóa đơn";
+            this.ThemVaoHoaDon.UseVisualStyleBackColor = true;
+            this.ThemVaoHoaDon.Click += new System.EventHandler(this.ThemVaoHoaDon_Click);
+            // 
+            // TongTien
+            // 
+            this.TongTien.Enabled = false;
+            this.TongTien.Location = new System.Drawing.Point(584, 206);
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            this.TongTien.Size = new System.Drawing.Size(157, 22);
+            this.TongTien.TabIndex = 36;
             // 
             // label18
             // 
@@ -401,14 +411,15 @@
             this.HuyHoaDon.UseVisualStyleBackColor = true;
             this.HuyHoaDon.Click += new System.EventHandler(this.HuyHoaDon_Click);
             // 
-            // button2
+            // Luu
             // 
-            this.button2.Location = new System.Drawing.Point(308, 235);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Lưu Hóa Đơn";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Luu.Location = new System.Drawing.Point(308, 235);
+            this.Luu.Name = "Luu";
+            this.Luu.Size = new System.Drawing.Size(121, 23);
+            this.Luu.TabIndex = 31;
+            this.Luu.Text = "Lưu Hóa Đơn";
+            this.Luu.UseVisualStyleBackColor = true;
+            this.Luu.Click += new System.EventHandler(this.Luu_Click);
             // 
             // ThemHoaDon
             // 
@@ -535,16 +546,6 @@
             this.label17.TabIndex = 20;
             this.label17.Text = "Thành Tiền";
             // 
-            // ThemVaoHoaDon
-            // 
-            this.ThemVaoHoaDon.Location = new System.Drawing.Point(145, 235);
-            this.ThemVaoHoaDon.Name = "ThemVaoHoaDon";
-            this.ThemVaoHoaDon.Size = new System.Drawing.Size(157, 23);
-            this.ThemVaoHoaDon.TabIndex = 37;
-            this.ThemVaoHoaDon.Text = "Thêm vào hóa đơn";
-            this.ThemVaoHoaDon.UseVisualStyleBackColor = true;
-            this.ThemVaoHoaDon.Click += new System.EventHandler(this.ThemVaoHoaDon_Click);
-            // 
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -614,9 +615,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button HuyHoaDon;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Luu;
         private System.Windows.Forms.Button ThemHoaDon;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox TongTien;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button ThemVaoHoaDon;
     }
